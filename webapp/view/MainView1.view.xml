@@ -1,0 +1,76 @@
+<mvc:View controllerName="home.kpmg.crud_demo.controller.MainView1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="{i18n>CRUD Operations}">
+					<content>
+						<VBox xmlns="sap.m" id="vboxid">
+							<items>
+								<HBox xmlns="sap.m">
+									<items>
+										<Button xmlns="sap.m" id="cbtn" press="oDataCall" text="Create"></Button>
+										<Button xmlns="sap.m" id="rbtn" press="oDataCall" text="Read"></Button>
+										<Button xmlns="sap.m" id="ubtn" press="oDataCall" text="Update"></Button>
+										<Button xmlns="sap.m" id="dbtn" press="oDataCall" text="Delete"></Button>
+									</items>
+								</HBox>
+								<HBox xmlns="sap.m">
+									<items>
+										<Input xmlns="sap.m" id="uniqueid" placeholder="Id" value="2"></Input>
+										<Input xmlns="sap.m" id="nameid" placeholder="Name" value="test"></Input>
+										<Input xmlns="sap.m" id="emailid" placeholder="Email" value="test@gmail.com"></Input>
+										<Input xmlns="sap.m" id="mobid" placeholder="Mobile" value="8888888888"></Input>
+									</items>
+								</HBox>
+								<HBox xmlns="sap.m">
+									<items>
+										<Table xmlns="sap.m" id="userdatatable" headerText="User Data" items="{ path: 'usersModel>/userdataSet' }">
+											<columns>
+												<Column xmlns="sap.m">
+													<header>
+														<Text xmlns="sap.m" text="Id"></Text>
+													</header>
+												</Column>
+												<Column xmlns="sap.m">
+													<header>
+														<Text xmlns="sap.m" text="Name"></Text>
+													</header>
+												</Column>
+												<Column xmlns="sap.m">
+													<header>
+														<Text xmlns="sap.m" text="Email"></Text>
+													</header>
+												</Column>
+												<Column xmlns="sap.m">
+													<header>
+														<Text xmlns="sap.m" text="Mobile"></Text>
+													</header>
+												</Column>
+											</columns>
+											<items>
+												<ColumnListItem>
+													<cells>
+														<ObjectIdentifier title="{usersModel>Id}"/>
+													</cells>
+													<cells>
+														<ObjectIdentifier title="{usersModel>Name}"/>
+													</cells>
+													<cells>
+														<ObjectIdentifier title="{usersModel>Email}"/>
+													</cells>
+													<cells>
+														<ObjectIdentifier title="{usersModel>Mobile}"/>
+													</cells>
+												</ColumnListItem>
+											</items>
+										</Table>
+									</items>
+								</HBox>
+							</items>
+						</VBox>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>
